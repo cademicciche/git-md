@@ -1,3 +1,4 @@
+import { JSX } from 'react';
 import {
   Box,
   Card,
@@ -20,7 +21,9 @@ const Container = chakra(Box, {
     display: 'flex',
     flexDirection: 'column',
     width: '100%',
+    height: '100%',
     alignItems: 'center',
+    justifyItems: 'center',
     p: 10,
   },
 });

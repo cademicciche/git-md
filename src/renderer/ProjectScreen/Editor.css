@@ -1,0 +1,11 @@
+.gitmd-editor {
+  --baseBase: var(--chakra-colors-gray-100);
+  --baseBgSubtle: var(--chakra-colors-gray-100);
+
+  --baseBg: var(--chakra-colors-gray-100);
+  --baseBgHover: var(--chakra-colors-gray-300);
+  --baseBgActive: var(--chakra-colors-gray-300);
+
+  --baseLine: var(--chrakra-colors-gray-100);
+  --baseBorder: var(--chrakra-colors-gray-100);
+}

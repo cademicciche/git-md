@@ -1,16 +1,5 @@
-import {
-  Text,
-  Button,
-  Flex,
-  chakra,
-  Divider,
-  IconButton,
-  Box,
-  Tooltip,
-  useDisclosure,
-} from '@chakra-ui/react';
-import { FaGit, FaUndo } from 'react-icons/fa';
-import { Fragment } from 'react';
+import { Text, Flex, chakra, Divider, Select } from '@chakra-ui/react';
+import { JSX } from 'react';
 
 const Container = chakra(Flex, {
   baseStyle: {
@@ -20,7 +9,7 @@ const Container = chakra(Flex, {
     wrap: 'wrap',
     width: '100%',
     height: 25,
-    // bgColor: 'gray.800',
+    bgColor: 'gray.100',
     color: 'blue.400',
     p: 5,
     pt: 8,
@@ -36,42 +25,17 @@ const Panel = chakra(Flex, {
 });
 
 export default function NavBar(): JSX.Element {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const {
-    isOpen: resetModalOpen,
-    onOpen: onResetOpen,
-    onClose: onResetClose,
-  } = useDisclosure();
-
   return (
-    <Fragment>
+    <>
       <Container as="nav">
         <Text fontSize={20} fontWeight="bold">
           Logo
         </Text>
         <Panel>
-          <Tooltip label="Configure Git">
-            <IconButton
-              variant="ghost"
-              color="blue.400"
-              onClick={onOpen}
-              icon={<FaGit />}
-              aria-label="Configure Git"
-              mr={2}
-            />
-          </Tooltip>
-          <Tooltip label="Reset">
-            <IconButton
-              variant="ghost"
-              color="blue.400"
-              onClick={onResetOpen}
-              icon={<FaUndo />}
-              aria-label="Reset"
-            />
-          </Tooltip>
+          <Select placeholder="Project" />
         </Panel>
       </Container>
       <Divider />
-    </Fragment>
+    </>
   );
 }
